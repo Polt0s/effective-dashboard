@@ -1,0 +1,12 @@
+[
+  {
+      "icon": "bx bx-shopping-bag",
+      "count": "1,205",
+      "title": "Total sales"
+  },
+  {
+      "icon": "bx bx-cart",
+      "count": "3.408",
+      "title": "Daily visits"
+  }
+]
