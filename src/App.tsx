@@ -1,10 +1,21 @@
-import React from 'react';
+import { Sidebar, TopNav } from "components";
+import { RootRoutes } from "./Routes";
 
-function App() {
+import './app.css';
+
+const App = () => {
   return (
-    <div className="App">
-      TEst
-    </div>
+    <main className="grid-root">
+        <div className="layout">
+          <Sidebar />
+          <div className="layout__content">
+            <TopNav />
+            <div className="layout__content-main">
+              <RootRoutes />
+            </div>
+          </div>
+        </div>
+    </main>
   );
 }
 
