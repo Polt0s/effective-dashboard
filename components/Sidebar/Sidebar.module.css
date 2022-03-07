@@ -1,0 +1,52 @@
+.Sidebar {
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: var(--main-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.Sidebar__logo {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Sidebar__logo > img {
+  height: 45px;
+  margin-right: 1rem;
+}
+
+.Sidebar__item {
+  padding: 0 20px;
+}
+
+.Sidebar__itemInner {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color .3s ease 0s;
+}
+
+.Sidebar__itemInner > span {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.Sidebar__itemInner:hover {
+  color: var(--main-color);
+}
+
+.Sidebar__itemInner.active {
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--second-color)
+  );
+  color: var(--txt-white);
+}

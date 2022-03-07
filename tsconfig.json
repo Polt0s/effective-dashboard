@@ -1,7 +1,6 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -20,11 +19,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "rootDir": "src",
-    "baseUrl": "src",
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
-    "src"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
