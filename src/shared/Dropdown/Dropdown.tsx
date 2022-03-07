@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 import './dropdown.css';
 
@@ -64,7 +65,7 @@ export const DropDown = ({ items, initialLink, style, customIcon, icon }: IDropD
 
             <div className={openMenu ? "dropdown__menu active" : 'dropdown__menu'} ref={dropDownRef}>
                 {items.map((item) => (
-                    <Link to={item.link} key={`${item.link}`} onClick={handleChangeLink}>
+                    <Link to={item.link} key={uuidv4()} onClick={handleChangeLink}>
                       <div className="notification-item">
                         <i>{item.icon}</i>
                         <span>{item.content}</span>
