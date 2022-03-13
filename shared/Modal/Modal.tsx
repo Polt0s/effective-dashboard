@@ -1,73 +1,61 @@
-import { useEffect, useRef } from 'react';
+import React from 'react';
+
+import { Button } from 'shared/Button';
+import { useClickOutside } from 'hooks';
 
 import styles from './Modal.module.css';
 
 interface IModal {
-  show: boolean;
+  isShow: boolean;
+  setIsShow: (item: boolean) => void;
   children: React.ReactNode;
-  setShow: (item: boolean) => void;
+  modalFooter?: boolean;
   hideCloseButton?: boolean;
+  title?: string;
+  buttonFooter?: boolean;
+  textButtonFooter?: string;
+  onClickButtonFooter?: () => void;
 }
 
-export const Modal = ({ show, children, setShow, hideCloseButton }: IModal) => {
-  const modalRef = useRef<HTMLDivElement>(null);
+export const Modal = ({ 
+  isShow,
+  setIsShow,
+  children,
+  modalFooter,
+  hideCloseButton,
+  title,
+  buttonFooter,
+  textButtonFooter,
+  onClickButtonFooter
+}: IModal) => {
+  useClickOutside(styles.Modal, () => setIsShow(false));
 
-  useEffect(() => {
-    const clickOutsideContent = (event: any) => {
-      if (event.target === modalRef.current) {
-        setShow(false);
-      }
+  const RenderModal = () => (
+    <div className={styles.Modal}>
+        <div className={styles.Modal__body}>
+          <div className={styles.Modal__header}>
+            <h2>{title}</h2>
+            {hideCloseButton && (
+              <span
+                onClick={() => setIsShow(false)}className={styles.Modal__close}
+              >
+                &times;
+              </span>
+            )}
+          </div>
 
-      window.addEventListener('click', clickOutsideContent);
-
-      return () => {
-        window.removeEventListener('click', clickOutsideContent);
-      }
-    };
-
-  }, [setShow, show]);
-
-  return (
-    <div ref={modalRef} className={`${styles.Modal} ${show ? styles.active : ''}`}>
-        <div className={styles.Modal__content}>
-          {!hideCloseButton && (
-            <span style={{ color: 'black' }}
-              onClick={() => setShow(false)}className={styles.Modal__close}
-            >
-              &times;
-            </span>
-          )}
           {children}
+
+          {modalFooter && <div className={styles.Modal__footer}>
+            {buttonFooter && (
+              <Button onClick={onClickButtonFooter}>{textButtonFooter}</Button>
+            )}
+            <Button onClick={() => setIsShow(false)}>Close</Button>
+          </div>}
         </div>
     </div>
   );
+
+  // createPortal(<RenderModal />, idRoot);
+  return isShow ? <RenderModal /> : null;
 };
-
-export const ModalHeader = ({ children }: IComponentModal) => {
-  return (
-    <div className={styles.Modal__header}>
-      {children}
-    </div>
-  )
-};
-
-export const ModalBody = ({ children }: IComponentModal) => {
-  return (
-    <div className={styles.Modal__body}>
-      {children}
-    </div>
-  )
-};
-
-export const ModalFooter = ({ children }: IComponentModal) => {
-  return (
-    <div className={styles.Modal__footer}>
-      {children}
-    </div>
-  )
-};
-
-
-interface IComponentModal {
-  children: React.ReactNode;
-}
