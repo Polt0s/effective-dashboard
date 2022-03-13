@@ -72,7 +72,7 @@ export const Table = ({
       {pages > 0 && !customBody ? (
         <div className={styles.Table__pagination}>
           {range.map((item, index) => (
-            <div key={index} className={`${styles.Table__paginationItem} ${currentPage === index ? styles.active : ''}`}
+            <div key={uuidv4()} className={`${styles.Table__paginationItem} ${currentPage === index ? styles.active : ''}`}
               onClick={() => selectPage(index)}
             >
               {item + 1}

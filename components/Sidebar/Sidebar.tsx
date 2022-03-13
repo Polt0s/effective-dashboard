@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image';
+import { v4 as uuidv4} from 'uuid';
 
 import styles from './Sidebar.module.css';
 import sidebar_items from '../../assets/jsonData/sidebar_routes.json';
@@ -28,8 +29,8 @@ export const Sidebar = () => (
         <Image src={logo} width="40" height="40" alt="company logo" />
         <h2>Effective</h2>
       </div>
-      {sidebar_items.map((item, index) => (
-        <Link href={item.route} key={index}>
+      {sidebar_items.map((item) => (
+        <Link href={item.route} key={uuidv4()}>
           <a>
             <SidebarItem
               title={item.display_name}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { v4 as uuidv4} from 'uuid';
 
 import { mode_settings, color_settings } from './data';
 import styles from './ThemeMenu.module.css';
@@ -59,8 +60,8 @@ export const ThemeMenu = () => {
         <div className={styles.ThemeMenu__select}>
           <span>Choose mode</span>
           <ul className={styles.ModeList}>
-            {mode_settings.map((item, index) => (
-              <li key={index} onClick={() => setMode(item)}>
+            {mode_settings.map((item) => (
+              <li key={uuidv4()} onClick={() => setMode(item)}>
                 <div className={`${styles.ModeList__color} ${item.background} ${item.id === currColor ? 'active' : '' }`}>
                   <span>check</span>
                 </div>
@@ -73,8 +74,8 @@ export const ThemeMenu = () => {
         <div className={styles.ThemeMenu__select}>
           <span>Choose color</span>
           <ul className={styles.ModeList}>
-            {color_settings.map((item, index) => (
-              <li key={index} onClick={() => setColor(item)}>
+            {color_settings.map((item) => (
+              <li key={uuidv4()} onClick={() => setColor(item)}>
                 <div className={`${styles.ModeList__color} ${item.background} ${item.id === currColor ? 'active' : '' }`}>
                   <span>check</span>
                 </div>
