@@ -1,0 +1,20 @@
+.Typography {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.TextAlign-center {
+  text-align: center;
+}
+
+.TextAlign-left {
+  text-align: left;
+}
+
+.TextAlign-right {
+  text-align: right;
+}
+
+.TextAlign-justify {
+  text-align: justify;
+}
