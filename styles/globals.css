@@ -48,7 +48,6 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.7px;
@@ -71,6 +70,9 @@ button {
 }
 
 input {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   border: 2px solid transparent;
   outline: 0;
 }
@@ -123,7 +125,7 @@ tbody > tr:hover {
   }
 }
 
-#__next {
+#root {
   /* background: linear-gradient(0deg, rgba(4, 8, 13, 0.2), rgba(4, 8, 13, 0.2)), linear-gradient(180deg, rgba(89, 2, 9, 0.3) 0%, rgba(4, 8, 13, 0.3) 100%); */
   /* background: rgba(11, 23, 39, 0.96); */
 
