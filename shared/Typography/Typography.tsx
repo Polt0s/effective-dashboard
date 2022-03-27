@@ -4,7 +4,7 @@ import cn from 'classnames';
 import styles from './Typography.module.css';
 
 interface ITypography {
-  variant: TVariant;
+  variant?: TVariant;
   align?: TTextAlign;
   size?: string;
   children: React.ReactNode;
@@ -21,5 +21,5 @@ export const Typography = ({ variant, children, style, align, className, size }:
   children
 );
 
-type TVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p';
+type TVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 type TTextAlign = 'center' | 'justify' | 'left' | 'right' | 'auto' | 'inherit' | 'start' | 'end';
