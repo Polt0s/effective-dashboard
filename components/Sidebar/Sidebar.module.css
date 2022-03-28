@@ -1,9 +1,11 @@
 .Sidebar {
-  min-width: var(--sidebar-width);
+  max-width: 218px;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
-  background-color: var(--main-bg);
+  background: #FFFFFF; 
+  /* background-color: var(--main-bg); */
   box-shadow: var(--box-shadow);
 }
 
@@ -21,11 +23,16 @@
 }
 
 .Sidebar__item {
-  padding: 0 20px;
+  padding: 10px 0 10px 28px;
+}
+
+.Sidebar__item:hover {
+  background: linear-gradient(90deg, #ACA9FF 0%, rgba(172, 169, 255, 0) 91.25%);
+  border-radius: 0px 5px 5px 0px;
 }
 
 .Sidebar__itemInner {
-  padding: 15px 25px;
+  gap: 14px;
   display: flex;
   align-items: center;
   font-weight: 600;
