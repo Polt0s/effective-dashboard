@@ -12,7 +12,7 @@ const imageSignIn = require('assets/image/imageSignIn.jpg');
 export const SignIn = () => {
   return (
     <div className="flex">
-        <aside className="bg-[#efefef] min-w-[448px] h-screen px-[50px] flex flex-col">
+        <aside className="bg-[#efefef] min-w-[448px] min-h-screen h-full px-[50px] flex flex-col">
             <div className="pt-[100px] pb-[40px] px-[128px] flex flex-col">
                 <Image src={iconLogin} width="92" height="92" alt="login logo" />
                 <Typography size="25px" align="center" className="mt-10 text-black">Sign In</Typography>
