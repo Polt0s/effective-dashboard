@@ -16,7 +16,7 @@
   right: 0;
   width: max-content;
   max-width: 400px;
-  background-color: var(--main-bg);
+  background-color: #665d58;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -37,7 +37,8 @@
 }
 
 .Notification__item:hover {
-  background-color: var(--second-bg);
+  cursor: pointer;
+  background-color: #455560;
 }
 
 .TopnavRight {
