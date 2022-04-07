@@ -8,6 +8,13 @@
   border-spacing: 0;
 }
 
+.Table__thBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+
 .Table__pagination {
   display: flex;
   width: 100%;
