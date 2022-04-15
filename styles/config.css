@@ -2,33 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * This injects Tailwind's base styles and any base styles registered by
- * plugins.
- */
- /* @tailwind base; */
-
- /**
-  * This injects Tailwind's component classes and any component classes
-  * registered by plugins.
-  */
- /* @tailwind components; */
- 
- /**
-  * This injects Tailwind's utility classes and any utility classes registered
-  * by plugins.
-  */
- /* @tailwind utilities; */
- 
- /**
-  * Use this directive to control where Tailwind injects the hover, focus,
-  * responsive, dark mode, and other variants of each class.
-  *
-  * If omitted, Tailwind will append these classes to the very end of
-  * your stylesheet by default.
-  */
- /* @tailwind variants; */
 @layer base {
+  :root {
+    --main-color: #349eff;
+    --second-color: #62b4ff;
+    --txt-color: #FFFFFF;
+    --txt-white: #fff;
+    --sidebar-width: 16rem;
+    --main-bg: #182838;
+    --main-color-orange: #d68102;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --border-radius: 15px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.7px;
+  }
+
   h1,
   h2,
   h3,
@@ -38,15 +37,87 @@
   p,
   span,
   input,
-  label {
+  label,
+  th {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+
+  a:hover {
+    color:  var(--main-color);
+  }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: var(--txt-color);
+  }
+  
+  input {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    border: 2px solid transparent;
+    outline: 0;
+  }
+  
+  input:focus {
+    border: 2px solid var(--main-color);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+  th, td {
+    text-transform: capitalize;
+    padding: 15px 10px;
+  }
+  
+  tbody > tr:hover {
+    background-color: var(--main-color);
+    color: var(--txt-white);
   }
 }
 
 @layer components {
   .typography {
     @apply not-italic text-white;
+  }
+
+  #root {
+    background-color: #E5E5E5;
+  }
+
+  .grid-root {
+    @apply w-full max-w-[1440px] mx-auto my-0 grid;
+  }
+
+  @media screen and (max-width: 1500px) {
+    .grid-root {
+        max-width: 1300px;
+    }
+  }
+  
+  @media screen and (max-width: 1350px) {
+    .grid-root {
+        max-width: 1150px;
+    }
+  }
+
+  .layout {
+    color: var(--txt-color);
+  }
+  
+  .layout__content {
+    padding-left: var(--sidebar-width);
+    min-height: 100vh;
   }
 }
