@@ -5,21 +5,21 @@ import { Products } from './Products';
 
 const index = () => {
 
-  return (
-    <div>
-      <Typography
-        variant="h1"
-        align="left"
-        size='20px'
-        style={{ marginBottom: 50 }}
-      >
-        Products
-      </Typography>
+    return (
+        <div>
+            <Typography
+                variant="h1"
+                align="left"
+                size="20px"
+                style={{ marginBottom: 50 }}
+            >
+            Products
+            </Typography>
 
-      <Products />
+            <Products />
 
-    </div>
-  );
+        </div>
+    );
 };
 
 export default index;
