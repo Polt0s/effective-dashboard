@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint -c .eslintrc.json --ext .ts,.tsx .",
+    "lint fix": "npm run lint -- --fix"
   },
   "eslintConfig": {
     "extends": [
