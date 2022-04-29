@@ -32,7 +32,7 @@ export const DropDown = ({ items, initialLink, style, customIcon, icon }: IDropD
     //     setCurrentLink(content);
     // };
 
-    const clickOutside = React.useCallback((event: MouseEvent): void => {
+    const clickOutside = React.useCallback((event: MouseEvent): void => { // ВЫНЕСТИ В ОТДЕЛЬНЫЙ HOOK
         const target = event.target as Element;
 
         if(openMenu && refToggle.current && !refToggle.current.contains(target) && !dropDownRef.current?.contains(target)) {

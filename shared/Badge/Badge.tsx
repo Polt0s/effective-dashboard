@@ -1,14 +1,12 @@
-import styles from './Badge.module.css';
-
 interface IBadge {
-  type: string;
-  content: string;
+  children: React.ReactElement;
+  className?: string;
 }
 
-export const Badge = ({ type, content }: IBadge) => {
+export const Badge = ({ children, className }: IBadge) => {
   return (
-    <span className={`${styles.Badge} ${styles.Badge}_${type}`}>
-      {content}
+    <span className={`rounded-lg flex justify-center items-center ${className}`}>
+      {children}
     </span>
   );
 };
