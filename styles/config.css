@@ -100,6 +100,10 @@
     @apply w-full max-w-[1440px] mx-auto my-0 grid;
   }
 
+  .bg-main:hover {
+    background-color: linear-gradient(90deg, #ACA9FF 0%, rgba(172, 169, 255, 0) 91.25%);
+  }
+
   @media screen and (max-width: 1500px) {
     .grid-root {
         max-width: 1300px;
