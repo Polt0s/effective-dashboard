@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+
 import styles from './Skeleton.module.css';
 
 interface ISkeleton {
