@@ -14,44 +14,44 @@ type TRouterSidebar = {
 }
 
 export const routesSidebar: TRouterSidebar[] = [
-  {
-      "display_name": "Dashboard",
-      "route": "/dashboard",
-      "icon": iconDashboard
-  },
-  {
-      "display_name": "Analytics",
-      "route": "/analytics",
-      "icon": iconAnalytics
-  },
-  {
-      "display_name": "Invoice",
-      "route": "/invoice",
-      "icon": iconInvoice
-  },
-  {
-      "display_name": "Schedule",
-      "route": "/schedule",
-      "icon": iconSchedule
-  },
-  {
-      "display_name": "Calendar",
-      "route": "/calendar",
-      "icon": iconCalendar
-  },
-  {
-      "display_name": "Messages",
-      "route": "/messages",
-      "icon": iconMessages
-  },
-  {
-      "display_name": "Notification",
-      "route": "/notification",
-      "icon": iconNotification
-  },
-  {
-      "display_name": "Settings",
-      "route": "/settings",
-      "icon": iconSettings
-  }
+    {
+        'display_name': 'Dashboard',
+        'route': '/dashboard',
+        'icon': iconDashboard
+    },
+    {
+        'display_name': 'Analytics',
+        'route': '/analytics',
+        'icon': iconAnalytics
+    },
+    {
+        'display_name': 'Invoice',
+        'route': '/invoice',
+        'icon': iconInvoice
+    },
+    {
+        'display_name': 'Schedule',
+        'route': '/schedule',
+        'icon': iconSchedule
+    },
+    {
+        'display_name': 'Calendar',
+        'route': '/calendar',
+        'icon': iconCalendar
+    },
+    {
+        'display_name': 'Messages',
+        'route': '/messages',
+        'icon': iconMessages
+    },
+    {
+        'display_name': 'Notification',
+        'route': '/notification',
+        'icon': iconNotification
+    },
+    {
+        'display_name': 'Settings',
+        'route': '/settings',
+        'icon': iconSettings
+    }
 ];
