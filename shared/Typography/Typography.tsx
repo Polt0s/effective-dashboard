@@ -13,12 +13,12 @@ interface ITypography {
 }
 
 export const Typography = ({ variant, children, style, align, className, size }: ITypography) => React.createElement(
-  variant || 'h1',
-  {
-    className: cn(styles.Typography, styles[`TextAlign-${align}`], className),
-    style: { fontSize: size, lineHeight: size, ...style}
-  },
-  children
+    variant || 'h1',
+    {
+        className: cn(styles.Typography, styles[`TextAlign-${align}`], className),
+        style: { fontSize: size, lineHeight: size, ...style}
+    },
+    children
 );
 
 type TVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'caption';

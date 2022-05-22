@@ -1,7 +1,5 @@
 import classNames from 'classnames';
 
-import styles from './Skeleton.module.css';
-
 interface ISkeleton {
     variant?: 'rectangular' | 'circular' | 'text';
     width?: number;
@@ -15,21 +13,21 @@ export const Skeleton = ({ variant, width, height, background, className }: ISke
     const RectangularSkeleton = () => (
         <div
             style={{ maxWidth: width, height: height, backgroundColor: background }}
-            className={classNames(styles.SkRectangular, className)}
+            className={classNames('bg-black-main w-full h-full animate-pulse', className)}
         />
     );
 
     const CircularSkeleton = () => (
         <div
             style={{ width: width, height: height, backgroundColor: background }}
-            className={classNames(styles.SkCircular, className)}
+            className={classNames('bg-black-main w-8 h-8 rounded-half animate-pulse', className)}
         />
     );
 
     const TextSkeleton = () => (
         <span
             style={{ backgroundColor: background }}
-            className={classNames(styles.SkText, className)}
+            className={classNames('d-block bg-black-main w-full h-5 rounded-xl animate-pulse', className)}
         />
     );
 

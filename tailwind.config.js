@@ -11,9 +11,13 @@ module.exports = {
             'tablet': '1024px',
             'desktop': '1280px',
         },
+        borderRadius: {
+            'half': '50%',
+        },
         colors: {
             'white': '#FFFFFF',
             'black': '#000000',
+            'black-main': '#313131',
             'blue': '#1fb6ff',
             'pink': '#ff49db',
             'orange': '#ff7849',
