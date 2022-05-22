@@ -68,7 +68,7 @@ export const Sidebar = () => (
                 height="150"
                 alt="image lamp"
             />
-            <Button className="bg-[#605BFF] rounded-xl">
+            <Button color="primary">
                 <Typography variant="p" align="center" size="12px" className="text-white font-semibold">Upgrade Now</Typography>
             </Button>
         </div>
