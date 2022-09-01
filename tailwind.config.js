@@ -12,12 +12,17 @@ module.exports = {
             'desktop': '1280px',
         },
         borderRadius: {
+            'main': '0.625rem',
+            'third': '2rem',
             'half': '50%',
         },
         colors: {
             'white': '#FFFFFF',
             'black': '#000000',
             'black-main': '#313131',
+            'primary': '#605BFF',
+            'light-blue': '#5B93FF',
+            'light-red': '#FF8F6B',
             'blue': '#1fb6ff',
             'pink': '#ff49db',
             'orange': '#ff7849',
